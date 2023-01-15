@@ -1,0 +1,17 @@
+{
+  "name": "nax-card",
+  "version": "0.0.3",
+  "description": "vue card",
+  "main": "naxCard.vue",
+  "keywords": "vue-card, nax-card, vue3, vue",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naxo25/nax-card.git"
+  },
+  "author": "naxo25",
+  "license": "ISC"
+}
