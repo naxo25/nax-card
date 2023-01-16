@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "nax-card": "^0.0.2",
+    "nax-card": "^0.0.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -12,35 +12,66 @@
       isLoading.value = false
     })
   }, 1000)
+
+  const styles = {
+    'mid-card': {
+      width: 404,
+      height: 354
+    }
+  }
 </script>
 
 <template>
-  <div style="margin: auto; margin-bottom: 60px;">
+  <div style="margin: auto; margin: 30px 0 30px 0;">
     <div v-if='!isLoading' class='container'>
-      <naxCard v-for='i in users' :img='i.picture.large' :text='i.email'/> 
+      <naxCard
+        v-for='i in users' 
+        :img='i.picture.large'
+        :text='i.email'
+        :styles="styles['mid-card']"
+      /> 
     </div>
     <div v-else class='container'>
-      <naxCard v-for='i in 4'/>
+      <naxCard
+        v-for='i in 4'
+        :styles="styles['mid-card']"/>
+    </div>
+
+    <div v-if='!isLoading' class='container'>
+      <naxCard
+        v-for='i in users' 
+        :img='i.picture.large'
+        :text='i.email'
+      /> 
+    </div>
+    <div v-else class='container'>
+      <naxCard
+        v-for='i in 4'
+      />
     </div>
 
     <div v-if='!isLoading' class='container'>
       <naxCard
         type='Banner' 
-        titleBanner='Title Banner' 
-        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' 
-        img='https://duckduckgo.com/assets/logo_header.v108.svg'
+        title='Title Banner' 
+        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' img='https://duckduckgo.com/assets/logo_header.v108.svg'
       />
-      <naxCard type='Banner' :notext='true' img='https://duckduckgo.com/assets/logo_header.v108.svg'/> 
+      <naxCard
+        type='Banner'
+        :notext='true'
+        img='https://duckduckgo.com/assets/logo_header.v108.svg'/> 
     </div>
     <div v-else class='container'>
-      <naxCard type='Banner'/>
-      <naxCard type='Banner'/>
+      <naxCard type='Banner' v-for='i in 2'/>
     </div>
   </div>
 </template>
 
 <style>
   .container {
-    margin: auto; display: flex; width: 80%; flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
   }
 </style>
