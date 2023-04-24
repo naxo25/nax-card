@@ -91,6 +91,7 @@
   height: v-bind(heightCard);
   border-radius: 6px;
   margin-right: 20px;
+  margin-top: 20px;
   color: #000;
   background-color: #fff; }
   .nax-card .img-card {
